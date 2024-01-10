@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Player</title>
+</head>
+
+<body>
+    <div class="playlist">
+        <h2>Playlist</h2>
+        <ul style="list-style: none; padding: 0">
+            <li style="margin-bottom: 20px;" class="topu-playlist-item" data-audio-index="0">
+                <p style="margin: 0; padding: 0;">Midnight Forest</p>
+                <p style="margin: 0; padding: 0;">Topu</p>
+            </li>
+            <li style="margin-bottom: 20px;" class="topu-playlist-item" data-audio-index="1">
+                <p style="margin: 0; padding: 0;">My Heart Will Go On</p>
+                <p style="margin: 0; padding: 0;">Celine Dion</p>
+            </li>
+            <li style="margin-bottom: 20px;" class="topu-playlist-item" data-audio-index="2">
+                <p style="margin: 0; padding: 0;">Despacito</p>
+                <p style="margin: 0; padding: 0;">Luis Fonsi</p>
+            </li>
+        </ul>
+    </div>
+    <div class="audio-player">
+        <audio id="myAudio">
+            <source src="" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="controls">
+            <div class="audio-info">
+                <img src="audio-placeholder.png" id="currentThumbnail" alt="">
+                <p id="currentAudio"> --- </p>
+                <p id="currentArtist"> --- </p>
+                <p id="currentAlbum"> ---</p>
+                <p id="currentGenre"> --- </p>
+                <p id="currentPlaylist"> --- </p>
+
+                <!-- <p id="currentFile">midnight-forest-184304.mp3</p>
+                <p id="totalFile">midnight-forest-184304.mp3</p> -->
+            </div>
+            <button id="prevBtn">&#9665;</button>
+            <button id="backwardBtn">&#9665;&#9665;</button>
+            <button id="playPauseBtn">&#9654;</button>
+            <button id="forwardBtn">&#9654;&#9654;</button>
+            <button id="nextBtn">&#9654;</button>
+            <button id="shuffleBtn">Shuffle</button>
+            <button id="resetBtn">Reset</button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+            <input type="range" id="seekBar" min="0" step="1" value="0">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
